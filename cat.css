@@ -1,0 +1,12 @@
+input:required:valid {
+  border-color: rgb(15, 2, 27);
+  border: 3px;
+}
+input {
+  margin: 0.2%;
+}
+
+label:required:valid {
+  border-color: rgb(16, 2, 29);
+  border: 3px;
+}

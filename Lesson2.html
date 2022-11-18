@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://img.icons8.com/?id=8IL68CmnrKzd&size=2x&color=000000" type="image/x-icon">
     <title>Анкета</title>
+    <link href="/cat.css" rel="stylesheet"/>
 </head>
 <body>
     
@@ -14,26 +15,27 @@
             <legend>Имя</legend>
 <div>
     <label for="name">Кличка питомца</label>
-    <input type="text" id="name"/>
+    <input type="text" id="name" required/>*
 </div>
 
 <div>
     <label for="fio">Имя владельца</label>
-    <input type="text" id="fio"/>
+    <input type="text" id="fio" required/>*
 </div>
 
 <div>
     <label for="adress">Контакты владельца</label>
-    <input type="text" id="login"/>
+    <input type="email" id="login" required/>*
 </div>
 </fieldset>
 
 </div>
 <div>
-    <label for="breeds">Выберите породу</label>
+    <label for="breeds" required >Выберите породу</label> *
 </div>
 <div>
     <select>
+        
         <option value="first option">Сибирская кошка</option>
         <option value="second option">Абиссинская кошка</option>
         <option value="third option">Британская кошка</option>
@@ -50,13 +52,13 @@
     </div>
 </div>
 <div>
-    <label for="sex">Выберите пол питомца</label>
-    <input type="text" id="sex"/>
+    <label for="sex" required>Выберите пол питомца</label>*
+    
 </div>
 <div>
-    <input type="radio" id="male" name="sex" value="Самец">
+    <input type="radio" id="male" name="sex" value="Самец"/>
 <label for="male">Male</label><br>
-<input type="radio" id="female" name="sex" value="Самка">
+<input type="radio" id="female" name="sex" value="Самка" />
 <label for="female">Female</label><br>
 </div>
 <div>
@@ -65,7 +67,7 @@
 </div>
 <div>
     <section>
-        <textarea rows="5" cols="20">Здесь можно добавить что-то важное</textarea> 
+        <textarea rows="5" cols="20" type="text" >Здесь можно добавить что-то важное</textarea> 
     </section>
 </div>
 <div>
