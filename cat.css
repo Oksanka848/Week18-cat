@@ -1,12 +1,35 @@
-input:required:valid {
-  border-color: rgb(15, 2, 27);
-  border: 3px;
+* {
+  font-size: 1rem;
+  font-style: italic;
+}
+div {
+  margin: 1%;
 }
 input {
-  margin: 0.2%;
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0.15rem;
+  min-width: 125px;
+  padding: 0.1rem;
+  transition: background-color 0.5s ease-out;
+}
+input:optional {
+  border-color: gray;
+}
+input:required {
+  border-color: rgb(9, 4, 70);
+}
+input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: green;
 }
 
-label:required:valid {
-  border-color: rgb(16, 2, 29);
-  border: 3px;
+label:invalid {
+  border-color: red;
+}
+label:valid {
+  border-color: green;
 }
