@@ -19,3 +19,14 @@
     }
 }
 */
+let button = document.getElementById ('button');
+button.addEventListener("click", function() {
+    check();
+    
+  });
+  function check() {
+    let checkd = document.querySelectorAll('input[type="checkbox"]');
+if (checkd.checked.length > 0)
+return true
+}
+
