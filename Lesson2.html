@@ -15,12 +15,12 @@
             <legend>Имя</legend>
 <div>
     <label for="name">Кличка питомца</label>
-    <input type="text" id="name" maxlength="15" required pattern="^[a-zA-Z\s.,]+$" title="Кличка должна содержать только прописные и строчные буквы!"/>*
+    <input type="text" id="name" maxlength="15" required pattern="^(?=.{1,40}$)[а-яёА-ЯЁ]+(?:[-' ][а-яёА-ЯЁ]+)*$" title="Кличка должна содержать только русские прописные и строчные буквы!"/>*
 </div>
 
 <div>
-    <label for="fio">Имя владельца</label>
-    <input type="text" name="fio" id="fio" required pattern="^[a-zA-Z\s.,]+$" title="Имя должно содержать прописные и строчные буквы!"/>*
+    <label for="fio">ФИО владельца</label>
+    <input type="text" name="fio" id="fio" required pattern="^(?=.{1,40}$)[а-яёА-ЯЁ]+(?:[-' ][а-яёА-ЯЁ]+)*$" title="Имя должно содержать русские прописные и строчные буквы!"/>*
 </div>
 
 <div>
