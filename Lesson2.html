@@ -36,9 +36,9 @@
 <div>
     <select name="breeds" id="breeds" required>
         <option value=""></option>
-        <option value="first option" >Сибирская кошка</option>
-        <option value="second option">Абиссинская кошка</option>
-        <option value="third option">Британская кошка</option>
+        <option selected type="text">Сибирская кошка</option>
+        <option type="text">Абиссинская кошка</option>
+        <option type="text">Британская кошка</option>
         </select>
 </div>
 <div>
@@ -46,9 +46,9 @@
 </div>
 <div>
     <div id="checkboxes" required>
-        <div><label for="one"><input type="checkbox" id="one" />сухой корм</label></div>
-        <div><label for="two"> <input type="checkbox" id="two" />влажный корм</label></div>
-        <div><label for="three"><input type="checkbox" id="three" />натуральный корм</label></div>
+        <div><label for="one"><input type="checkbox" name="food" id="one" value="сухой корм" />сухой корм</label></div>
+        <div><label for="two"> <input type="checkbox" name="food" id="two" value="влажный корм"/>влажный корм</label></div>
+        <div><label for="three"><input type="checkbox" name="food" id="three" value="натуральный корм" />натуральный корм</label></div>
     </div>
 </div>
 <div>
@@ -57,9 +57,9 @@
 </div>
 <div>
     <input type="radio" id="male" name="sex" value="Самец" required="required"/>
-<label for="male">Male</label><br>
+<label for="male">Самец</label><br>
 <input type="radio" id="female" name="sex" value="Самка" />
-<label for="female">Female</label><br>
+<label for="female">Самка</label><br>
 </div>
 <div>
     <label for="comment">Комментарий</label>

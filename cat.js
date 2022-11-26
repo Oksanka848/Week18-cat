@@ -38,25 +38,21 @@ alert('выберите хотя бы один вариант')
 }
 }*/
 class Cat {
-    constructor (name, breeds, food, sex){
+  constructor(name, breeds, food, sex) {
     this.name = name;
     this.breeds = breeds;
     this.food = food;
     this.sex = sex;
-    }
-   
+  }
 }
-   
-    
-        let name2 = document.getElementById ('name').value;
-        //let breeds2 = document.querySelector('select[name="breeds"].checked').nextElementSibling.textContent;
-        let food2 = document.querySelectorAll('input[type="checkbox"]:checked').nextElementSibling.textContent;
-        let sex2 = document.querySelector('input[type="radio"]:checked').value;
 
-    let mycat = new Cat(name2, breeds2, food2, sex2 );
-    
-   console.log(mycat);
-   let button = document.getElementById ('button');
-   button.addEventListener("click", console.log(mycat)
-         );
-  
+let mycatname = document.getElementById("name").value;
+let breed = document.getElementById("breeds").value;
+let mycatfood = document.querySelector('input[type="checkbox"][name="food"]:checked').value;
+let mycatsex = document.querySelector('input[type="radio"]:checked').value;
+
+let mycat = new Cat(mycatname, breed, mycatfood, mycatsex);
+
+console.log(mycat);
+let button = document.getElementById("button");
+button.addEventListener("click", console.log(mycat));
