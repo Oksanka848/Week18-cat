@@ -25,18 +25,24 @@
 В этом классе будут только свойства и конструктор, без методов. 
 Выведите результат (заполненный объект класса Cat) в консоль при помощи console.log.*/
 
-/*let button = document.getElementById ('button');
+let button = document.getElementById ('button');
+let mycatname = document.getElementById("name").value;
+let breed = document.getElementById("breeds").value;
+let catfoods = Array.from(document.querySelectorAll('input[name="food"]:checked'));
+let mycatfood = catfoods.map((item) => item.value);
+let mycatsex = document.querySelectorAll('input[name="sex"]:checked').value;
 button.addEventListener("click", function() {
     check()
+    console.log(mycat)
       });
   function check() {
-    let checkd = document.querySelectorAll('input[type="checkbox"]:checked');
-if (checkd.checked == false)
-return false
-else{
-alert('выберите хотя бы один вариант')
-}
-}*/
+    document.getElementById ('error').innerHTML=" ";
+    
+if (catfoods.length == 0){
+    document.getElementById ('error').innerHTML+= "выберите хотя бы один вариант <br>";
+
+}}
+
 class Cat {
   constructor(name, breeds, food, sex) {
     this.name = name;
@@ -46,13 +52,10 @@ class Cat {
   }
 }
 
-let mycatname = document.getElementById("name").value;
-let breed = document.getElementById("breeds").value;
-let mycatfood = document.querySelector('input[type="checkbox"][name="food"]:checked').value;
-let mycatsex = document.querySelector('input[type="radio"]:checked').value;
+
 
 let mycat = new Cat(mycatname, breed, mycatfood, mycatsex);
 
 console.log(mycat);
-let button = document.getElementById("button");
-button.addEventListener("click", console.log(mycat));
+
+

@@ -48,3 +48,13 @@ select:invalid {
 #checkboxes:invalid {
   border-color: red;
 }
+#error {
+  color: #da383f;
+}
+.form-error {
+  font-size: 13px;
+  line-height: 1.53846154;
+  margin-top: 5px;
+  display: block;
+  color: #da383f;
+}
