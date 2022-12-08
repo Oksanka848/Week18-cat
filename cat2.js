@@ -42,14 +42,17 @@ let mycatsex = catsex.map((item) => item.value);
 button.addEventListener("click", function() {
     check()
     console.log(mycat)
+    
       });
   function check() {
     document.getElementById ('error').innerHTML=" ";
     
-if (catfoods.length == 0){
+if (mycatfood.length == 0){
     document.getElementById ('error').innerHTML+= "выберите хотя бы один вариант <br>";
-
-}}
+    return true;
+    }
+    return false;
+}
 
 class Cat {
   constructor(name, breeds, food, sex) {
@@ -60,29 +63,24 @@ class Cat {
   }
 }
 
-
-
 let mycat = new Cat(mycatname, breed, mycatfood, mycatsex);
-
 console.log(mycat);
 
-button.addEventListener("click", function(e) {
+button.addEventListener('click' , function(e) {
    
     e.preventDefault();
-    const form =document.querySelector('form');
     
     fetch('https://httpbin.org/post',
     {
         method: 'POST',
         body: new FormData(form),
         headers: {
-            'Content-Type': 'application/json; charset=UTF-8'
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         },
     })
-    .then(response=>response.json())
-    .then(form => {
-        console.log(form);
+    .then(response => response.json())
+    .then(user => {
+        console.log(user);
     })
 .catch(error => console.log(error));
-
-    });
+});

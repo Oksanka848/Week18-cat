@@ -1,12 +1,12 @@
 //let form =  document.getElementById ('form');
-let button = document.getElementById ('button');
-let mycatname = document.getElementById("name").value;
+//let button = document.getElementById ('button');
+/*let mycatname = document.getElementById("name").value;
 let breed = document.getElementById("breeds").value;
 let catfoods = Array.from(document.querySelectorAll('input[name="food"]:checked'));
 let mycatfood = catfoods.map((item) => item.value);
 let catsex = Array.from(document.querySelectorAll('input[name="sex"]:checked'));
 let mycatsex = catsex.map((item) => item.value);
-button.onclick = function() {
+/*button.onclick = function() {
     check()
     console.log(mycat)
       }
@@ -27,10 +27,11 @@ class Cat {
   }
 }
 let mycat = new Cat(mycatname, breed, mycatfood, mycatsex);
-console.log(mycat);
-button.addEventListener('click' , function(event) {
+console.log(mycat);*/
+/*button.addEventListener('click' , function(e) {
    
-    event.preventDefault();
+    e.preventDefault();
+    
     fetch('https://httpbin.org/post',
     {
         method: 'POST',
@@ -44,5 +45,5 @@ button.addEventListener('click' , function(event) {
         console.log(user);
     })
 .catch(error => console.log(error));
-});
+});*/
 
