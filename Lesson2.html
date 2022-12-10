@@ -14,7 +14,7 @@
             <legend>Имя</legend>
 <div>
     <label for="name">Кличка питомца</label>
-    <input type="text" id="name" maxlength="15" required pattern="^(?=.{1,40}$)[а-яёА-ЯЁ]+(?:[-' ][а-яёА-ЯЁ]+)*$" title="Кличка должна содержать только русские прописные и строчные буквы!"/>*
+    <input type="text" name="mycatname" id="name" maxlength="15" required pattern="^(?=.{1,40}$)[а-яёА-ЯЁ]+(?:[-' ][а-яёА-ЯЁ]+)*$" title="Кличка должна содержать только русские прописные и строчные буквы!"/>*
 </div>
 
 <div>
@@ -74,10 +74,11 @@
     
     <input type="file" id="myFile" />
 </div>
+
+</form>
 <div>
     <button type="button" id="button">Сохранить</button>
     </div> 
-</form>
 <script src="cat2.js"></script>
 
 </body>

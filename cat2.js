@@ -32,57 +32,63 @@ mycatsex : document.querySelectorAll('input[name="sex"]:checked').value
 В этом классе будут только свойства и конструктор, без методов. 
 Выведите результат (заполненный объект класса Cat) в консоль при помощи console.log.*/
 
+button.addEventListener(
+  "click",
+  function () {
+    check();
+    sentIt();
+  },
 
-button.addEventListener("click", function() {
-    check()
-    console.log(mycat)
-      },
-      //let button = document.getElementById ('button');
-mycatname = document.getElementById("name").value,
-breed = document.getElementById("breeds").value,
-catfoods = Array.from(document.querySelectorAll('input[name="food"]:checked')),
-mycatfood = catfoods.map((item) => item.value),
-mycatsex = form.querySelector('input[name="sex"]:checked').value
+  class Cat {
+    constructor(name, breeds, food, sex) {
+      this.name = name;
+      this.breeds = breeds;
+      this.food = food;
+      this.sex = sex;
+    }
 
+    mycatname = document.getElementById("name").value;
+    breed = document.getElementById("breeds").value;
+    catfoods = Array.from(
+      document.querySelectorAll('input[name="food"]:checked')
+    );
+    mycatfood = catfoods.map((item) => item.value);
+    catsex = Array.from(document.querySelectorAll('input[name="sex"]:checked'));
+    mycatsex = catsex.map((item) => item.value);
+    mycat = new Cat(mycatname, breed, mycatfood, mycatsex);
+    mycat = console.log(mycat);
+  }
 );
+
 function check() {
-    document.getElementById ('error').innerHTML=" ";
-    
-if (mycatfood.length == 0){
-    document.getElementById ('error').innerHTML+= "выберите хотя бы один вариант <br>";
-
-}}
-
-class Cat {
-  constructor(name, breeds, food, sex) {
-    this.name = name;
-    this.breeds = breeds;
-    this.food = food;
-    this.sex = sex;
+  document.getElementById("error").innerHTML = " ";
+  let catfoods = Array.from(
+    document.querySelectorAll('input[name="food"]:checked')
+  );
+  let mycatfood = catfoods.map((item) => item.value);
+  if (mycatfood.length == 0) {
+    document.getElementById("error").innerHTML +=
+      "выберите хотя бы один вариант <br>";
+  } else {
+    sentIt();
   }
 }
 
-let mycat = new Cat(mycatname, breed, mycatfood, mycatsex);
+function sentIt() {
+  let e = window.event;
 
-console.log(mycat);
+  e.preventDefault();
 
-
-
-/*button.addEventListener('click' , function(e) {
-   
-    e.preventDefault();
-    
-    fetch('https://httpbin.org/post',
-    {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-        },
+  fetch("https://httpbin.org/post", {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((mycat) => {
+      console.log(mycat);
     })
-    .then(response => response.json())
-    .then(mycat => {
-        console.log(mycat);
-    })
-.catch(error => console.log(error));
-});*/
+    .catch((error) => console.log(error));
+}
