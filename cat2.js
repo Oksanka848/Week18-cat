@@ -35,8 +35,8 @@ mycatsex : document.querySelectorAll('input[name="sex"]:checked').value
 button.addEventListener(
   "click",
   function () {
-    check();
-    sentIt();
+    check()
+    
   },
 
   class Cat {
